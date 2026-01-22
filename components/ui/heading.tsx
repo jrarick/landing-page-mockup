@@ -23,5 +23,10 @@ export function Heading<T extends AllowedTags = "p">({
   ...props
 }: HeadingProps<T>) {
   const Component = (as ?? "p") as ElementType
-  return <Component {...props} className={cn(anton.className, className)} />
+  return (
+    <Component
+      {...props}
+      className={cn(anton.className, "uppercase", className)}
+    />
+  )
 }

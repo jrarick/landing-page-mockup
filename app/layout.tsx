@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(openSans.className, "antialiased")}>
+      <body className={cn(openSans.className, "bg-background antialiased")}>
         <Header />
-        {children}
+        <div className="pt-12">{children}</div>
         <Footer />
       </body>
     </html>

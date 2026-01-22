@@ -20,7 +20,7 @@ export default async function Footer() {
           See additional information on our Disclaimers page.
         </p>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col justify-end">
         <a
           className={cn(buttonVariants({ variant: "link" }), "font-bold")}
           href="#"

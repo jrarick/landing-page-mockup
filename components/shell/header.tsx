@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { PhoneCall } from "lucide-react"
+import { PhoneCallIcon } from "lucide-react"
 import { buttonVariants } from "../ui/button"
 import { cn } from "@/lib/utils"
 
 export default async function Header() {
   return (
-    <header className="bg-primary w-full border-b border-black">
-      <div className="mx-auto flex max-w-4xl items-center justify-between p-2">
+    <header className="bg-primary fixed top-0 z-50 w-full border-b border-black">
+      <div className="mx-auto flex max-w-5xl items-center justify-between p-2">
         <Link href="/" aria-label="Home">
           <Image
             src="/topdog-logo.png"
@@ -18,12 +18,12 @@ export default async function Header() {
           />
         </Link>
         <div className="flex items-center gap-2">
-          <PhoneCall className="h-6 w-6" />
+          <PhoneCallIcon className="h-6 w-6" />
           <Link
             href="tel:+18334054414"
             className={cn(
               buttonVariants({ size: "lg", variant: "secondary" }),
-              "rounded-full font-black"
+              "rounded-full font-bold"
             )}
           >
             1 (833) 405-4414
