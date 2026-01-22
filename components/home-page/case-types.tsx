@@ -28,7 +28,7 @@ export default async function CaseTypes() {
             "rounded-full font-bold"
           )}
         >
-          (833) 405-4414
+          1 (833) 405-4414
         </a>
       </div>
       <Image
