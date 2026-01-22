@@ -18,7 +18,7 @@ export default async function Header() {
           />
         </Link>
         <div className="flex items-center gap-2">
-          <PhoneCallIcon className="h-6 w-6" />
+          <PhoneCallIcon className="size-8" />
           <Link
             href="tel:+18334054414"
             className={cn(

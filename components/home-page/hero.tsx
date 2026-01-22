@@ -15,7 +15,7 @@ export default async function Hero() {
         <p className="text-xl">Get a TopDog Lawyer.</p>
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <PhoneCallIcon className="h-6 w-6" />
+            <PhoneCallIcon className="size-8" />
             <Link
               href="tel:+18334054414"
               className={cn(
@@ -31,7 +31,7 @@ export default async function Hero() {
             Start!
           </p>
         </div>
-        <div className="pt-12">
+        <div className="hidden md:block pt-12">
           <figure className="relative max-w-fit">
             <Image
               src="/attorney.png"
