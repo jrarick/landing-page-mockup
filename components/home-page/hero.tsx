@@ -4,13 +4,14 @@ import Link from "next/link"
 import { buttonVariants } from "../ui/button"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import { CaseWizard } from "./case-wizard"
 
 export default async function Hero() {
   return (
-    <section className="mx-auto grid max-w-5xl grid-cols-2 pt-16">
-      <div className="col-span-2 space-y-4 md:col-span-1">
-        <Heading as="h2" className="text-7xl">
-          $601 Million Recoverd for Clients*
+    <section className="mx-auto grid max-w-5xl pt-16 lg:grid-cols-2">
+      <div className="mx-auto max-w-md space-y-4 px-4 pb-12 lg:max-w-full lg:pb-0">
+        <Heading as="h2" className="text-5xl lg:text-7xl">
+          $601 Million Recovered for Clients*
         </Heading>
         <p className="text-xl">Get a TopDog Lawyer.</p>
         <div className="space-y-2">
@@ -31,7 +32,7 @@ export default async function Hero() {
             Start!
           </p>
         </div>
-        <div className="hidden pt-12 md:block">
+        <div className="hidden pt-12 lg:block">
           <figure className="relative max-w-fit">
             <Image
               src="/attorney.png"
@@ -48,12 +49,15 @@ export default async function Hero() {
           </figure>
         </div>
       </div>
-      <div className="mb-16 flex flex-col justify-between bg-white p-6">
+      <div className="mx-auto mb-16 flex flex-col justify-between gap-12 bg-white p-6">
         <div className="space-y-4">
           <Heading as="h2" className="text-5xl">
             88,000+ People Helped*
           </Heading>
-          <p className="text-lg">Always Free Until You Win!</p>
+          <p className="text-lg">
+            Always <span className="font-semibold">Free</span> Until You Win!
+          </p>
+          <CaseWizard />
         </div>
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-4 pb-8">
