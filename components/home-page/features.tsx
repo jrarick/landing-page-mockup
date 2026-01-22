@@ -10,7 +10,7 @@ export default async function Features() {
             key={feature.title}
             className="flex flex-col items-center gap-3 text-center"
           >
-            <feature.icon className="size-8 text-[#2d509b]" />
+            <feature.icon className="text-tertiary size-8" />
             <Heading as="h3" className="text-4xl">
               {feature.title}
             </Heading>
