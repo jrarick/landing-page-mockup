@@ -31,7 +31,7 @@ export default async function Hero() {
             Start!
           </p>
         </div>
-        <div className="hidden md:block pt-12">
+        <div className="hidden pt-12 md:block">
           <figure className="relative max-w-fit">
             <Image
               src="/attorney.png"
@@ -48,7 +48,41 @@ export default async function Hero() {
           </figure>
         </div>
       </div>
-      <div></div>
+      <div className="mb-16 flex flex-col justify-between bg-white p-6">
+        <div className="space-y-4">
+          <Heading as="h2" className="text-5xl">
+            88,000+ People Helped*
+          </Heading>
+          <p className="text-lg">Always Free Until You Win!</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-4 pb-8">
+            <span className="text-sm font-semibold tracking-widest uppercase">
+              As seen on:
+            </span>
+            <Image
+              src="/abc.png"
+              width={80}
+              height={80}
+              alt="ABC Logo"
+              className="h-auto w-20"
+            />
+            <Image
+              src="/cbs.png"
+              width={80}
+              height={80}
+              alt="CBS Logo"
+              className="h-auto w-20"
+            />
+          </div>
+          <p className="text-xs">
+            *Recoveries by TopDog Law and its co-counsel firms.
+          </p>
+          <p className="text-xs">
+            *James Helm admitted in Arizona and Pennsylvania.
+          </p>
+        </div>
+      </div>
     </section>
   )
 }
