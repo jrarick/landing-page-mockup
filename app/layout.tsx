@@ -1,17 +1,13 @@
 import type { Metadata } from "next"
-import { Anton, Open_Sans } from "next/font/google"
+import { Open_Sans } from "next/font/google"
 import "./globals.css"
+import Header from "@/components/shell/header"
+import Footer from "@/components/shell/footer"
+import { cn } from "@/lib/utils"
 
 const openSans = Open_Sans({
-  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "700"],
-})
-
-const anton = Anton({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
 })
 
 export const metadata: Metadata = {
@@ -26,8 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${anton.variable} antialiased`}>
+      <body className={cn(openSans.className, "antialiased")}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
