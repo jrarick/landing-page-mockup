@@ -4,8 +4,15 @@ import Image from "next/image"
 
 export default async function Testimonials() {
   return (
-    <section className="h-160 w-full bg-[url('/testimonial-background.jpg')] bg-cover bg-center md:h-200">
-      <div className="flex h-full w-full flex-col items-center justify-center">
+    <section className="relative h-160 w-full md:h-200">
+      <Image
+        src="/testimonial-background.jpg"
+        alt="A photo collage of happy clients"
+        fill
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
         <Carousel className="w-md max-w-full px-4">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
@@ -32,6 +39,7 @@ export default async function Testimonials() {
           width={200}
           height={50}
           className="mt-12 h-10 w-auto"
+          loading="lazy"
         />
       </div>
     </section>

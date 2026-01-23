@@ -2,6 +2,7 @@
 
 import { Progress } from "@/components/ui/progress"
 import { useWizard } from "./wizard-context"
+import { Field, FieldLabel } from "@/components/ui/field"
 
 const STEP_LABELS = {
   1: "Your Location & Case",
@@ -16,12 +17,19 @@ export function WizardProgress() {
   const stepLabel = STEP_LABELS[currentStep as keyof typeof STEP_LABELS]
 
   return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <p className="text-sm font-bold">{stepLabel}</p>
-        <p className="text-sm">Step {currentStep} of 4</p>
-      </div>
-      <Progress value={progressValue} />
-    </div>
+    <Field className="space-y-2">
+      <FieldLabel
+        className="flex items-center justify-between"
+        htmlFor="form-progress"
+      >
+        <span className="text-sm font-bold">{stepLabel}</span>
+        <span className="text-sm">Step {currentStep} of 4</span>
+      </FieldLabel>
+      <Progress
+        value={progressValue}
+        id="form-progress"
+        aria-label="Form Progress"
+      />
+    </Field>
   )
 }

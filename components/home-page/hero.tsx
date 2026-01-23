@@ -37,8 +37,10 @@ export default async function Hero() {
             <Image
               src="/attorney.png"
               width={450}
-              height={550}
+              height={541}
               alt="Image of attorney James Helm standing with arms crossed behind a dog"
+              loading="eager"
+              fetchPriority="high"
             />
             <figcaption className="bg-background/80 absolute top-[40%] -right-12 rounded-sm border border-black/50 p-3 backdrop-blur-md">
               <Heading as="div" className="text-center text-4xl">
