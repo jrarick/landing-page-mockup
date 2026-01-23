@@ -13,16 +13,7 @@ export interface WizardFormData {
   consent: boolean
 }
 
-export interface WizardErrors {
-  zipCode?: string
-  caseType?: string
-  description?: string
-  firstName?: string
-  lastName?: string
-  phone?: string
-  email?: string
-  consent?: string
-}
+export type WizardErrors = Partial<Record<keyof WizardFormData, string>>
 
 export interface WizardContextType {
   currentStep: number
